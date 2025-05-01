@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const sendMessage = createAsyncThunk('messages/sendMessage', async ({ recipientId, content }) => {
-  const response = await axios.post('/api/messages', { recipientId, content });
+  const response = await axios.post('/api/messages', { recipientId, content });  //replace with full API 
   return response.data;
 });
 
